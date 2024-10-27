@@ -1,0 +1,6 @@
+aiohttp==3.10.10
+asyncpg==0.30.0 
+click==8.1.7 
+pillow==11.0.0 
+pydantic-settings==2.6.0 
+pydantic==2.9.2

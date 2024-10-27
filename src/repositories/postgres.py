@@ -7,7 +7,7 @@ from src.config.config import Settings
 from src.domain.entities import Image
 from src.repositories.base import ImageRepository
 
-logger = logging.getLogger("Postgres")
+logger = logging.getLogger(__name__)
 
 
 class PostgresImageRepository(ImageRepository):

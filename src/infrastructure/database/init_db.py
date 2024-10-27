@@ -4,7 +4,7 @@ import asyncpg
 
 from src.config.config import get_settings
 
-logger = logging.getLogger("InitTables")
+logger = logging.getLogger(__name__)
 
 CREATE_IMAGES_TABLE_SQL = """
 CREATE TABLE IF NOT EXISTS images (

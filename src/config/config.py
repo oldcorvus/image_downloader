@@ -1,7 +1,8 @@
 from functools import lru_cache
 from typing import Tuple
 
-from pydantic import BaseSettings, ConfigDict, Field, field_validator
+from pydantic import ConfigDict, Field, field_validator
+from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):

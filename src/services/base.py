@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from typing import List
+from typing import Callable, List, Tuple
 
 
 class ImageSearchService(ABC):
@@ -9,3 +9,15 @@ class ImageSearchService(ABC):
         Fetches image URLs from Google Custom Search API based on the search query
         """
         raise NotImplementedError("Method `fetch_image_urls` must be implimented")
+
+
+class BaseProcessImageService(ABC):
+    def __init__(self, processing_func: Callable[[bytes], Tuple[bytes, int, int]]):
+        self.processing_func = processing_func
+
+    @abstractmethod
+    async def process_image(self, image_data: bytes) -> Tuple[bytes, int, int]:
+        """
+        Processes the image data (resizing ,...)
+        """
+        raise NotImplementedError("Method `proccess_image` must be implimented")

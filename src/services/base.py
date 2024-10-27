@@ -21,3 +21,12 @@ class BaseProcessImageService(ABC):
         Processes the image data (resizing ,...)
         """
         raise NotImplementedError("Method `proccess_image` must be implimented")
+
+
+class BaseDownloadImageService(ABC):
+    @abstractmethod
+    async def download_image(self, url: str) -> bytes:
+        """
+        Downloads an image from the specified URL
+        """
+        raise NotImplementedError("Method `download_image` must be implimented")

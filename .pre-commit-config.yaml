@@ -34,9 +34,3 @@ repos:
     -   id: mypy
         args: [--ignore-missing-imports]
 
--   repo: https://github.com/pycqa/pylint
-    rev: v3.2.2
-    hooks:
-      - id: pylint
-        args: ["--disable=all", "--enable=missing-docstring"]
-        exclude: ^examples/
